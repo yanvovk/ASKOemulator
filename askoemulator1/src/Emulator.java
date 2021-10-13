@@ -4,6 +4,8 @@ public class Emulator {
 
     public static Connection getOracleConnection(String hostName, String sid, String userName, String password)
             throws  SQLException {
+        //DriverManager.registerDriver(new oracle.jdbc.OracleDriver());
+
         String connectionURL = "jdbc:mercury:oracle:@" + hostName + ":1521/" + sid;
         Connection connection = DriverManager.getConnection(connectionURL, userName, password);
 
